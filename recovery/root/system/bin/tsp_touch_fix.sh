@@ -15,7 +15,7 @@ while true; do
     if [ "$new" = "0" ]; then
         screen_was_off=1
     elif [ "$screen_was_off" = "1" ]; then
-        sleep 1.0
+        sleep 2.0
         fix
         screen_was_off=0
     fi
