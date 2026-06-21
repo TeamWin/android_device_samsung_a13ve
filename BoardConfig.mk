@@ -57,7 +57,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TW_THEME := portrait_hdpi
 TW_Y_OFFSET := 50
 TW_H_OFFSET := -50
-TW_NO_SCREEN_TIMEOUT := true
+#TW_NO_SCREEN_TIMEOUT := true
 TW_MAX_BRIGHTNESS := 306
 TW_DEFAULT_BRIGHTNESS := 200
 TARGET_SCREEN_WIDTH := 1080
@@ -66,6 +66,7 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/tsp_touch_fix.sh:recovery/root/system/bin/tsp_touch_fix.sh
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
