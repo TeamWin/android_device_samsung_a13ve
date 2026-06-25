@@ -35,3 +35,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
+
+  PRODUCT_COPY_FILES += $(LOCAL_PATH)/tsp_touch_fix.sh:recovery/root/sbin/tsp_touch_fix.sh
+  $(shell chmod 755 $(LOCAL_PATH)/tsp_touch_fix.sh)

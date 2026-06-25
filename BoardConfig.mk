@@ -64,7 +64,6 @@ TARGET_SCREEN_HEIGHT := 2400
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/tsp_touch_fix.sh:recovery/root/sbin/tsp_touch_fix.sh
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
