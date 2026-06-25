@@ -67,7 +67,7 @@ on post-fs
 
     export ANDROID_ROOT /system_root
 
-service tsp_touch_fix /system/bin/tsp_touch_fix.sh
+service tsp_touch_fix /sbin/tsp_touch_fix.sh
     class main
     user root
     group root
