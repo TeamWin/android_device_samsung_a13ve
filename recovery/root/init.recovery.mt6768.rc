@@ -31,6 +31,8 @@ on init
     mkdir /efs
     mkdir /sec_efs
     start health-hal-2-1
+    chmod 0755 /sbin/tsp_touch_fix.sh
+    start tsp_touch_fix
 
 on boot
     setprop ro.boot.vbmeta.avb_version 1.1
@@ -66,3 +68,9 @@ on post-fs
     exec u:r:update_engine:s0 root root -- /system/bin/mtk_plpath_utils
 
     export ANDROID_ROOT /system_root
+
+service tsp_touch_fix /sbin/tsp_touch_fix.sh
+    class main
+    user root
+    group root
+    seclabel u:r:recovery:s0
