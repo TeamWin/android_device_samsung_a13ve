@@ -13,7 +13,7 @@ fix() {
     esac
 }
 
-sleep 10
+sleep 3
 
 getevent -l /dev/input/event2 | while read line; do
     case "$line" in
